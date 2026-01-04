@@ -1,0 +1,46 @@
+/* Services styles are shared or inline for now. 
+See Pricing.css which actually contains both for efficiency or split if needed. 
+Actually let's keep it separate to be clean. */
+
+/* Moved Services specific CSS to Pricing.css temporarily in my previous thought, 
+but for cleanliness let's import Pricing.css or just copy the Services part here. 
+Wait, I wrote "CSS for Services and Pricing components" into Pricing.css. 
+I should probably rename Pricing.css to something more generic or just let it be.
+A better approach is to have Services.css import specific things or just be empty if handled in index.css
+But I put the rules in Pricing.css in the previous tool call.
+I will create a dummy Services.css or just import Pricing.css in Services.jsx.
+Actually, I imported '../styles/Services.css' in Services.jsx.
+So I MUST create `src/styles/Services.css`.
+And `src/styles/Pricing.css` was created in the previous step but I put BOTH CSS there.
+I should split them.
+*/
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  transition: transform 0.3s ease;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  background: rgba(30, 41, 59, 0.6);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  padding: 1rem;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 50%;
+}
